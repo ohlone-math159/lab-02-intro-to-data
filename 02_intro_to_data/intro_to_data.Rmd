@@ -38,10 +38,10 @@ install the **openintro** package
 
 ```{r load-packages, message=FALSE}
 # install.packages command is needed in the consule
-install.packages("tidyverse")
-install.packages("devtools")
-library(devtools)
-install_github("OpenIntroStat/openintro-r-package")
+#install.packages("tidyverse")
+#install.packages("devtools")
+#library(devtools)
+#install_github("OpenIntroStat/openintro-r-package")
 library(tidyverse)
 library(openintro)
 ```
@@ -369,12 +369,12 @@ ggplot(data = nycflights, aes(x = origin, fill = dep_type)) +
     Airlines, and the points are `color`ed by `carrier`. Once you replicate
     the plot, determine (roughly) what the cutoff point is for departure
     delays where you can still expect to get to your destination on time.
+    
+![Plot to Replicate](../Rplot.png)  
 
 ```{r plot-to-replicate, echo=FALSE, eval=TRUE, fig.width=7, fig.height=4}
-dl_aa_ua <- nycflights %>%
-  filter(carrier == "AA" | carrier == "DL" | carrier == "UA")
-ggplot(data = dl_aa_ua, aes(x = dep_delay, y = arr_delay, color = carrier)) +
-  geom_point()
+
+
 ```
 
 <div id="license">
