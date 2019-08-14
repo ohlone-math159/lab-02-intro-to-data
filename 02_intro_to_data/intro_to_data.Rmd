@@ -12,7 +12,7 @@ output:
 ```{r global-options, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE)
 library(tidyverse)
-library(openintro)
+
 ```
 
 Some define statistics as the field that focuses on turning information into
@@ -32,9 +32,16 @@ processing and subsetting.
 In this lab, we will explore and visualize the data using the **tidyverse** suite of 
 packages. The data can be found in the companion package for OpenIntro labs, **openintro**.
 
-Let's load the packages.
+Let's load the packages. The openintro package that we need is a development package
+so we need to install the **devtools** package and then use `install_github` command to 
+install the **openintro** package
 
 ```{r load-packages, message=FALSE}
+# install.packages command is needed in the consule
+install.packages("tidyverse")
+install.packages("devtools")
+library(devtools)
+install_github("OpenIntroStat/openintro-r-package")
 library(tidyverse)
 library(openintro)
 ```
